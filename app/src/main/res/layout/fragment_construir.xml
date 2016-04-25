@@ -2,13 +2,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConstruirFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.construguia.tecnoparque.construguia.ConstruirFragment">
 
-    <com.google.android.gms.plus.PlusOneButton xmlns:plus="http://schemas.android.com/apk/lib/com.google.android.gms.plus"
-        android:id="@+id/plus_one_button"
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+
+    <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/add"
+        />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        plus:annotation="inline"
-        plus:size="standard" />
+        android:text="New Button"
+        android:id="@+id/button"
+        android:layout_gravity="center" />
 
 </FrameLayout>

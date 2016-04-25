@@ -17,8 +17,4 @@
         android:src="@drawable/construguia"
         android:id="@+id/imageView" />
 
-
-
-
-
 </LinearLayout>
