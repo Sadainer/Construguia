@@ -16,19 +16,19 @@ public class adaptador_listview extends ArrayAdapter<itemLista> {
 
     itemLista[] datos;
     Context cnt;
-    int layout;
+    int layout_list;
     public adaptador_listview(Context context, int resource, itemLista[] objects) {
         super(context, resource, objects);
         datos=objects;
         cnt=context;
-        layout=resource;
+        layout_list=resource;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
-        View item = inflater.inflate(layout, null);
+        View item = inflater.inflate(layout_list, null);
 
         TextView lblTitulo = (TextView)item.findViewById(R.id.textTitulo);
         lblTitulo.setText(datos[position].getTitulo());
