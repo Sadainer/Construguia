@@ -16,11 +16,22 @@
         android:src="@drawable/add"
         />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
         android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Presione el botón para agregar una construcción"
+        android:id="@+id/textView"
+        android:textColor="@color/textoColor"
+
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+
 
 </FrameLayout>
