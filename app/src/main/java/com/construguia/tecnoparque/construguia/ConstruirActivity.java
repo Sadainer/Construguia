@@ -1,21 +1,25 @@
 package com.construguia.tecnoparque.construguia;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Window;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.construguia.tecnoparque.construguia.DTO.itemLista;
 
 public class ConstruirActivity extends AppCompatActivity {
 
     ListView listItemConstruir;
+    Context cnt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_construir);
-
+        cnt=this;
         itemLista[] datos =
                 new itemLista[]{
                         new itemLista("Piso", "Todo tipo de pisos", R.drawable.piso),
@@ -26,12 +30,20 @@ public class ConstruirActivity extends AppCompatActivity {
                         new itemLista("Luminaria", "Todo tipo de luminarias", R.drawable.piso),
                 };
 
-        adaptador_listview adaptador =
-                new adaptador_listview(this, R.id.listViewConstruir,datos);
+        AdaptadorListview adaptador =
+                new AdaptadorListview(this,R.layout.layout_adaptador_listview,datos);
 
         listItemConstruir = (ListView)findViewById(R.id.listViewConstruir);
 
         listItemConstruir.setAdapter(adaptador);
+
+        listItemConstruir.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                itemLista item = (itemLista)parent.getItemAtPosition(position);
+                Toast.makeText(cnt,item.getTitulo().toString(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 }
