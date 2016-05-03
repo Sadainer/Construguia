@@ -23,7 +23,7 @@
         </activity>
         <activity android:name=".ConstruirActivity" >
         </activity>
-        <activity android:name=".ContruirTipoActivity" >
+        <activity android:name=".ConstruirTipoActivity" >
         </activity>
     </application>
 

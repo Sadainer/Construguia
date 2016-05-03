@@ -37,6 +37,21 @@ public class Principal extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        boolean fragmentTransaction = false;
+        Fragment fragmento= new InicioFragment();
+        FragmentManager fragmentManager = getFragmentManager();
+
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_frame, fragmento)
+                    .commit();
+
+        drawer.closeDrawer(GravityCompat.START);
+
+
+
+
     }
 
     @Override
