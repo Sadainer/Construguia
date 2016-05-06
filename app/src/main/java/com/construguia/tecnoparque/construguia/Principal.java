@@ -39,7 +39,7 @@ public class Principal extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        boolean fragmentTransaction = false;
+
         Fragment fragmento= new InicioFragment();
         FragmentManager fragmentManager = getFragmentManager();
 
@@ -100,6 +100,9 @@ public class Principal extends AppCompatActivity
             fragmentTransaction=true;
         } else if (id == R.id.nav_gallery) {
             fragmento = new CotizacionFragment();
+            fragmentTransaction=true;
+        } else if (id == R.id.nav_house) {
+            fragmento = new InicioFragment();
             fragmentTransaction=true;
         } else if (id == R.id.nav_slideshow) {
 
