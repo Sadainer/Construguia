@@ -98,6 +98,9 @@ public class Principal extends AppCompatActivity
         if (id == R.id.nav_camara) {
             fragmento = new ConstruirFragment();
             fragmentTransaction=true;
+        } else if (id == R.id.nav_house) {
+            fragmento = new InicioFragment();
+            fragmentTransaction=true;
         } else if (id == R.id.nav_gallery) {
             fragmento = new CotizacionFragment();
             fragmentTransaction=true;
